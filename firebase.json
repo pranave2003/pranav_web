@@ -1,0 +1,55 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "pranav-c1ff0",
+          "appId": "1:697700472810:android:245074626d6418122e4493",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "pranav-c1ff0",
+          "appId": "1:697700472810:ios:68fb7ebf7c4ee4202e4493",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "pranav-c1ff0",
+          "appId": "1:697700472810:ios:68fb7ebf7c4ee4202e4493",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "pranav-c1ff0",
+          "configurations": {
+            "android": "1:697700472810:android:245074626d6418122e4493",
+            "ios": "1:697700472810:ios:68fb7ebf7c4ee4202e4493",
+            "macos": "1:697700472810:ios:68fb7ebf7c4ee4202e4493",
+            "web": "1:697700472810:web:de5aab2ccc27a3d02e4493",
+            "windows": "1:697700472810:web:47727148d91bab532e4493"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

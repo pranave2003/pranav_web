@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "697700472810",
+    "firebase_url": "https://pranav-c1ff0-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "pranav-c1ff0",
+    "storage_bucket": "pranav-c1ff0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:697700472810:android:245074626d6418122e4493",
+        "android_client_info": {
+          "package_name": "com.example.pranav"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5mN7nvoXjdaKgS4C7fKQ1ipVs3RIlYis"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

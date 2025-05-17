@@ -39,6 +39,7 @@
     }
   },
   "hosting": {
+"site": "pranavsoft",
     "public": "build/web",
     "ignore": [
       "firebase.json",

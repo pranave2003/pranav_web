@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pranav/TODO/features/model/Todomodel.dart';
-
 import '../bloc/todowork_bloc.dart';
 
 class Addtodo extends StatefulWidget {
@@ -175,8 +174,10 @@ class _AddtodoState extends State<Addtodo> {
                           name: _todoNameController.text,
                           place: _placeController.text,
                         );
-                        context.read<TodoworkBloc>()
-                          ..add(Addtodoevent(todo: todo));
+                        if (_formKey.currentState!.validate()) {
+                          context.read<TodoworkBloc>()
+                            ..add(Addtodoevent(todo: todo));
+                        }
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.teal,

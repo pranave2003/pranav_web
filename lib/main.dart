@@ -5,6 +5,7 @@ import 'package:pranav/TODO/features/bloc/todowork_bloc.dart';
 import 'package:pranav/firebase_options.dart';
 
 import 'TODO/features/view/AddTodo.dart';
+import 'TODO/features/view/ViewTodo.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,15 +21,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider<TodoworkBloc>(create: (context) => TodoworkBloc()),
+        BlocProvider<TodoworkBloc>(
+          create:
+              (context) =>
+                  TodoworkBloc()
+                    ..add(FetchTodo(searchQuery: null, isadd: false)),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Pranav',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: Addtodo(),
+        home: Viewtodo(),
       ),
     );
   }

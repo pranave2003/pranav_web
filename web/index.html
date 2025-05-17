@@ -1,9 +1,59 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+
+<!--  <base href="$FLUTTER_BASE_HREF">-->
+
+<!--  <meta charset="UTF-8">-->
+<!--  <meta content="IE=Edge" http-equiv="X-UA-Compatible">-->
+<!--  <meta name="description" content="A new Flutter project.">-->
+
+<!--  &lt;!&ndash; iOS meta tags & icons &ndash;&gt;-->
+<!--  <meta name="mobile-web-app-capable" content="yes">-->
+<!--  <meta name="apple-mobile-web-app-status-bar-style" content="black">-->
+<!--  <meta name="apple-mobile-web-app-title" content="pranav">-->
+<!--  <link rel="apple-touch-icon" href="icons/Icon-192.png">-->
+
+<!--  &lt;!&ndash; Favicon &ndash;&gt;-->
+<!--  <link rel="icon" type="image/png" href="favicon.png"/>-->
+
+<!--  <title>pranav</title>-->
+<!--  <link rel="manifest" href="manifest.json">-->
+<!--</head>-->
+<!--<body>-->
+<!--  <script src="flutter_bootstrap.js" async></script>-->
+
+<!--  <script type="module">-->
+<!--    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";-->
+<!--    import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";-->
+<!--    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";-->
+
+<!--    const firebaseConfig = {-->
+<!--      apiKey: "AIzaSyDlVADeAMt8y7SSCjEmXEgt9R9vU69ALYc",-->
+<!--      authDomain: "pranav-c1ff0.firebaseapp.com",-->
+<!--      databaseURL: "https://pranav-c1ff0-default-rtdb.asia-southeast1.firebasedatabase.app",-->
+<!--      projectId: "pranav-c1ff0",-->
+<!--      storageBucket: "pranav-c1ff0.appspot.com",-->
+<!--      messagingSenderId: "697700472810",-->
+<!--      appId: "1:697700472810:web:47727148d91bab532e4493",-->
+<!--      measurementId: "G-NE0B7M6WBE"-->
+<!--    };-->
+
+<!--    // Initialize Firebase-->
+<!--    const app = initializeApp(firebaseConfig);-->
+<!--    const db = getFirestore(app);-->
+<!--    const analytics = getAnalytics(app);-->
+<!--  </script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-
   <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A new Flutter project.">
@@ -19,15 +69,14 @@
 
   <title>pranav</title>
   <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-app.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-firestore.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.7.3/firebase-analytics.js";
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
 
+  <script>
+    // Firebase configuration
     const firebaseConfig = {
       apiKey: "AIzaSyDlVADeAMt8y7SSCjEmXEgt9R9vU69ALYc",
       authDomain: "pranav-c1ff0.firebaseapp.com",
@@ -40,10 +89,12 @@
     };
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-    const analytics = getAnalytics(app);
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   </script>
-
+</head>
+<body>
+<!-- Flutter initialization -->
+<script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

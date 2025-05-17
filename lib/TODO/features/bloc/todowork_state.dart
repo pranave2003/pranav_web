@@ -18,3 +18,8 @@ final class Todoerror extends TodoworkState {
 }
 
 final class done extends TodoworkState {}
+
+
+
+final class ViewLoading extends TodoworkState{}
+final class Refresh extends TodoworkState{}

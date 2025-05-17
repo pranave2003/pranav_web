@@ -1,3 +1,4 @@
+import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pranav/TODO/features/model/Todomodel.dart';
@@ -22,33 +23,9 @@ class _AddtodoState extends State<Addtodo> {
     super.dispose();
   }
 
-  // void _submitForm() {
-  //   if (_formKey.currentState!.validate()) {
-  //     setState(() {
-  //       _isLoading = true;
-  //     });
-  //
-  //     // Simulate API call or database operation
-  //     Future.delayed(const Duration(seconds: 1), () {
-  //       if (mounted) {
-  //         setState(() {
-  //           _isLoading = false;
-  //         });
-  //
-  //         // Show success message
-  //
-  //         // Clear form
-  //         _todoNameController.clear();
-  //         _placeController.clear();
-  //       }
-  //     });
-  //   }
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {}),
       appBar: AppBar(
         title: const Text('Add New Todo'),
         backgroundColor: Colors.teal,
@@ -60,7 +37,7 @@ class _AddtodoState extends State<Addtodo> {
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
-            colors: [Colors.teal.shade50, Colors.white],
+            colors: [Colors.white, Colors.teal.shade100],
           ),
         ),
         child: Padding(
@@ -157,13 +134,21 @@ class _AddtodoState extends State<Addtodo> {
                       );
                     }
                     if (state is done) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text("Added"),
-                          backgroundColor: Colors.green,
-                          behavior: SnackBarBehavior.floating,
+                      Navigator.of(context).pop();
+                      Flushbar(
+                        message: "Added Successfully",
+                        backgroundColor: Colors.green,
+                        margin: const EdgeInsets.all(8),
+                        borderRadius: BorderRadius.circular(12),
+                        duration: const Duration(seconds: 2),
+                        flushbarPosition: FlushbarPosition.BOTTOM,
+                        icon: const Icon(
+                          Icons.check_circle,
+                          color: Colors.white,
                         ),
-                      );
+                        forwardAnimationCurve: Curves.easeOutBack,
+                        reverseAnimationCurve: Curves.easeInCubic,
+                      ).show(context);
                     }
                   },
                   builder: (context, state) {
